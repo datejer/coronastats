@@ -77,7 +77,11 @@ const Amount = styled.h2`
 	color: red;
 `;
 
-const Caption = styled.h3``;
+const Caption = styled.h3`
+	@media (max-width: 550px) {
+		font-size: 1em;
+	}
+`;
 
 const App = () => {
 	const { data } = useSWR(
