@@ -83,6 +83,21 @@ const Caption = styled.h3`
 	}
 `;
 
+const Footer = styled.footer`
+	font-size: 1em;
+	font-weight: 400;
+	color: #000;
+	position: absolute;
+	bottom: 0;
+	margin: 0.5em 0;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+`;
+
+const Link = styled.a`
+	color: #000;
+	font-weight: 400;
+`;
+
 const App = () => {
 	const { data } = useSWR(
 		"https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases/FeatureServer/1/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outStatistics=%5B%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Confirmed%22%2C%22outStatisticFieldName%22%3A%22confirmed%22%7D%2C%20%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Deaths%22%2C%22outStatisticFieldName%22%3A%22deaths%22%7D%2C%20%7B%22statisticType%22%3A%22sum%22%2C%22onStatisticField%22%3A%22Recovered%22%2C%22outStatisticFieldName%22%3A%22recovered%22%7D%5D&outSR=102100&cacheHint=false",
@@ -127,6 +142,9 @@ const App = () => {
 					</Column>
 				</Flexbox>
 			</Box>
+			<Footer>
+				Made by <Link href="http://ejer.ga">ejer</Link>
+			</Footer>
 		</Container>
 	);
 };
