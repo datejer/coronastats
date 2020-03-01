@@ -67,6 +67,7 @@ const Flexbox = styled.div`
 	display: flex;
 	overflow: hidden;
 	margin: 2em 0;
+	flex-wrap: wrap;
 `;
 
 const Column = styled.div`
@@ -75,6 +76,7 @@ const Column = styled.div`
 
 const Amount = styled.h2`
 	color: red;
+	margin: 0.2em;
 `;
 
 const Caption = styled.h3`
